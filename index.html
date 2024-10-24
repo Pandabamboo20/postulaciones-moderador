@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postulación para Moderador</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .note {
+            color: #888;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Postulación para Moderador</h1>
+    <form action="submit_form.php" method="POST">
+        <!-- Nombre de usuario -->
+        <label for="username">Nombre de usuario (Discord/Twitch/YouTube):</label>
+        <input type="text" id="username" name="username" required placeholder="Tu nombre de usuario aquí">
+
+        <!-- Edad -->
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" required placeholder="Ingresa tu edad">
+
+        <!-- ¿Cuánto tiempo sigues el canal? -->
+        <label for="follower-time">¿Cuánto tiempo llevas siguiendo el canal?</label>
+        <select id="follower-time" name="follower-time" required>
+            <option value="">Selecciona una opción</option>
+            <option value="menos-de-1-mes">Menos de 1 mes</option>
+            <option value="1-3-meses">Entre 1 y 3 meses</option>
+            <option value="3-6-meses">Entre 3 y 6 meses</option>
+            <option value="más-de-6-meses">Más de 6 meses</option>
+        </select>
+
+        <!-- Experiencia previa -->
+        <label for="experience">¿Tienes experiencia previa como moderador? Si es así, detalla dónde y cuándo:</label>
+        <textarea id="experience" name="experience" rows="4" required placeholder="Explica tu experiencia como moderador (si tienes)"></textarea>
+
+        <!-- ¿Por qué quieres ser moderador? -->
+        <label for="reason">¿Por qué quieres ser moderador?</label>
+        <textarea id="reason" name="reason" rows="4" required placeholder="Cuéntanos por qué te gustaría formar parte del equipo de moderadores"></textarea>
+
+        <!-- Disponibilidad -->
+        <label for="availability">¿Cuál es tu disponibilidad horaria para moderar?</label>
+        <input type="text" id="availability" name="availability" required placeholder="Indica tu disponibilidad horaria">
+
+        <!-- Aclaración -->
+        <p class="note">⚠️ Solo se considerarán seguidores del canal. No se aceptan postulaciones de streamers.</p>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar postulación</button>
+    </form>
+</div>
+
+</body>
+</html>
